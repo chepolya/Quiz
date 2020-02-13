@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.horizontal-line-top {
+    background-color: lightskyblue;
+    text-align: left;
+    width: 100%;
+    height: 3px;
+}
+
+.horizontal-line-bottom {
+    background-color: deepskyblue;
+    text-align: left;
+    width: 100%;
+    height: 3px;
+}

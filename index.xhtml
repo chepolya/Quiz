@@ -7,6 +7,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>#{quiz.header}</title>
+<link href="css/quiz.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <header>
       <h1>#{quiz.header}</h1>
       <!-- Horizontal line between quiz header and question -->
-      <div style="background-color: lightskyblue; text-align: left; width: 100%; height: 3px;"></div>
+      <div class="horizontal-line-top"></div>
       <h2>#{quiz.question}</h2>
     </header>
 
@@ -25,7 +26,11 @@
 	  
     </form>
 
-	<footer><p style="color: blueviolet">Don't forget to write footer over here!!!</p></footer>
+	<footer>
+      <!-- Horizontal line between quiz header and question -->
+      <div class="horizontal-line-bottom"></div>
+      <h3><p style="color: blueviolet; text-align: center">Don't forget to write footer over here!!!</p></h3>
+    </footer>
 
   </c:view>
 
