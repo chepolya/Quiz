@@ -1,1 +1,1 @@
-Quiz System
+Quizzing System

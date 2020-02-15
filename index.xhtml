@@ -1,7 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:c="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:pf="http://primefaces.org/ui">
 
 <head>
@@ -21,13 +23,15 @@
       <h2>#{quiz.question}</h2>
     </header>
 
-    <form id="answers" action="#{quiz.saveAnswers()}" >
-	  
-	  
-    </form>
+    <main>
+      <form id="answers" action="#{quiz.saveAnswers()}" accept-charset="UTF-8">
 
+
+      </form>
+    </main>
+ 
 	<footer>
-      <!-- Horizontal line between quiz header and question -->
+      <!-- Horizontal line between quiz footer and question -->
       <div class="horizontal-line-bottom"></div>
       <h3><p style="color: blueviolet; text-align: center">Don't forget to write footer over here!!!</p></h3>
     </footer>
