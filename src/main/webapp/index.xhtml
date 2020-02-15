@@ -9,7 +9,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>#{quiz.header}</title>
-<link href="../../../css/quiz.css" rel="stylesheet" type="text/css" />
+  <link href="css/quiz.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -17,10 +17,15 @@
   <c:view>
 
     <header>
-      <h1>#{quiz.header}</h1>
+      <div class="header">
+	    <img src="images/logo.png" width="47" height="49" alt=""/>
+        <h1>#{quiz.header}</h1>
+      </div>
+      <!-- <h1 align="center">#{quiz.header}</h1>
+      <img src="images/logo.png" width="93" height="98" alt=""/> -->
       <!-- Horizontal line between quiz header and question -->
       <div class="horizontal-line-top"></div>
-      <h2>#{quiz.question}</h2>
+      <h2>Вопрос:&nbsp;&nbsp;#{quiz.question}</h2>
     </header>
 
     <main>

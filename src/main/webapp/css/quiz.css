@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+.header img {
+  float: left;
+}
+
+.header h1 {
+  text-align: center;
+}
+
 .horizontal-line-top {
     background-color: lightskyblue;
     text-align: left;
