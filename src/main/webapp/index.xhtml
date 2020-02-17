@@ -10,38 +10,85 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>#{quiz.header}</title>
   <link href="css/quiz.css" rel="stylesheet" type="text/css" />
-</head>
+	
+</hea<h:outputStylesheet name="css/books.css"/>d>
 
 <body>
 
-  <c:view>
+  <header>
+    <div class="header">
+      <img src="images/logo.png" width="47" height="49" alt=""/>
+      <h1>#{quiz.header}</h1>
+    </div>
+    <!-- <h1 align="center">#{quiz.header}</h1>
+    <img src="images/logo.png" width="93" height="98" alt=""/> -->
+    <!-- Horizontal line between quiz header and question -->
+    <div class="horizontal-line-top"></div>
+    <h2>Вопрос:&nbsp;&nbsp;#{quiz.question}</h2>
+  </header>
+  <main>
+    <form id="answers" action="#{quiz.saveAnswers()}" accept-charset="UTF-8">
 
-    <header>
-      <div class="header">
-	    <img src="images/logo.png" width="47" height="49" alt=""/>
-        <h1>#{quiz.header}</h1>
-      </div>
-      <!-- <h1 align="center">#{quiz.header}</h1>
-      <img src="images/logo.png" width="93" height="98" alt=""/> -->
-      <!-- Horizontal line between quiz header and question -->
-      <div class="horizontal-line-top"></div>
-      <h2>Вопрос:&nbsp;&nbsp;#{quiz.question}</h2>
-    </header>
-
-    <main>
-      <form id="answers" action="#{quiz.saveAnswers()}" accept-charset="UTF-8">
-
-
-      </form>
-    </main>
+compile group: 'org.primefaces', name: 'primefaces', version: '7.0'
+<dependency>
+  <groupId>org.primefaces</groupId>
+  <artifactId>primefaces</artifactId>
+  <version>7.0</version>
+  <type>pom</type>
+</dependency>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
  
-	<footer>
-      <!-- Horizontal line between quiz footer and question -->
-      <div class="horizontal-line-bottom"></div>
-      <h3><p style="color: blueviolet; text-align: center">Don't forget to write footer over here!!!</p></h3>
-    </footer>
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>bootstrap</param-value>
+    </context-param>
+ 
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+ 
+    <welcome-file-list>
+        <welcome-file>customers.xhtml</welcome-file>
+    </welcome-file-list>
+ 
+</web-app>
+ <h:dataTable value="#{categoryEditor.categories}"
+6 var="cat">
+7 <h:column>
+8 <h:commandLicategoryEteCategory(cat)}">
+10 <h:graphicImage alt="delete"
+11 name="Delete.png"
+12 library="icon/small"
+13 title="delete"/>
+14 </h:commandLink>
+15 </h:column>
+16 <h:column>
+17 <h:inputText value="#{cat.name}"/>
+18 </h:column>
+19 </h:dataTable>
+20 <h:commandLink styleClass="button"
+21 value="Add category"
+22 action="#{categoryEditor.addCategory}"/>
+23 <h:commandButton styleClass="button"
+24 value="Save"
+25 action="#{categoryEditor.save}"/>
+    </form>
+  </main>
 
-  </c:view>
+  <footer>
+    <!-- Horizontal line between quiz footer and question -->
+    <div class="horizontal-line-bottom"></div>
+    <h3><p style="color: blueviolet; text-align: center">Don't forget to write footer over here!!!</p></h3>
+  </footer>
 
 </body>
 </html>
